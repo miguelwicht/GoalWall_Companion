@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MainMenuView.h
 //  GoalWall_Companion
 //
 //  Created by Miguel dos Santos Vaz Dias Wicht on 23/11/14.
@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface MainMenuView : UIView
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UINavigationController *navigationController;
+@property(strong, nonatomic) UIButton *updatePlayerNameButton;
 
+- (void)initViews;
 
 @end
-

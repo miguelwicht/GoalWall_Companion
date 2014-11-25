@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  UpdatePlayerNameViewController.h
 //  GoalWall_Companion
 //
 //  Created by Miguel dos Santos Vaz Dias Wicht on 23/11/14.
@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "UpdatePlayerNameView.h"
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UINavigationController *navigationController;
+@interface UpdatePlayerNameViewController : UIViewController
 
+@property(strong, nonatomic) UpdatePlayerNameView *updatePlayerNameView;
 
 @end
-

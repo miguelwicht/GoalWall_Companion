@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UpdatePlayerNameView.h
 //  GoalWall_Companion
 //
 //  Created by Miguel dos Santos Vaz Dias Wicht on 23/11/14.
@@ -8,19 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <NSURLConnectionDelegate>
-
-@property (strong, nonatomic) NSMutableData *responseData;
-@property (strong, nonatomic) NSDictionary *statisticData;
+@interface UpdatePlayerNameView : UIView
 
 @property (strong, nonatomic) IBOutlet UILabel *eventTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *modeTitleLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *userImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
-
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
-- (IBAction)submitFormAction:(id)sender;
+
+- (void)initViews;
 
 @end
-
