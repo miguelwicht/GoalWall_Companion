@@ -32,6 +32,12 @@
     [self.view addSubview:self.updatePlayerNameView];
     
     [self.updatePlayerNameView initViews];
+    [self.updatePlayerNameView.backButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (IBAction)backButtonPressed:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)viewDidLoad {

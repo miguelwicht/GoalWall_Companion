@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 - (void)initViews;
 

@@ -11,6 +11,7 @@
 @interface MainMenuView : UIView
 
 @property(strong, nonatomic) UIButton *updatePlayerNameButton;
+@property(strong, nonatomic) UIImageView *logoImage;
 
 - (void)initViews;
 

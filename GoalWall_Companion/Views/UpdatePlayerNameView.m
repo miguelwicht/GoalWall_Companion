@@ -14,7 +14,7 @@
 - (void)initViews
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
-    //self.backgroundColor = [UIColor blueColor];
+    self.backgroundColor = [UIColor whiteColor];
     
     self.eventTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 100, 10)];
     [self.eventTitleLabel setFont:[UIFont fontWithName:self.eventTitleLabel.font.fontName size:24]];
@@ -41,6 +41,11 @@
     [self.submitButton setFrame:CGRectMake(0, 0, 100, 20)];
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     [self addSubview:self.submitButton];
+    
+    self.backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.backButton setFrame:CGRectMake(0, 0, 100, 10)];
+    [self.backButton setTitle:@"Back" forState:UIControlStateNormal];
+    [self addSubview:self.backButton];
 }
 
 - (void)layoutSubviews
@@ -66,6 +71,9 @@
     [self.submitButton setOriginY:self.nameTextField.originY];
     [self.submitButton sizeToFit];
     
+    [self.backButton sizeToFit];
+    [self.backButton setOriginX:self.frame.size.width - self.backButton.frame.size.width];
+    [self.backButton setOriginY:20];
 }
 
 /*
