@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "UpdatePlayerNameViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface MainMenuViewController ()
 
@@ -15,34 +16,34 @@
 
 @implementation MainMenuViewController
 
-- (void)loadView
-{
-    [super loadView];
-    [self setupNavigationBar];
-    [self initView];
-    NSLog(@"loadView");
-    
-}
+//- (void)loadView
+//{
+//    [super loadView];
+////    [self setupNavigationBar];
+////    [self initView];
+//    NSLog(@"loadView");
+//    
+//}
 
-- (void)setupNavigationBar
-{
-    [self.navigationController setNavigationBarHidden:YES];
-}
-
-- (void)initView
-{
-    self.mainMenuView = [[MainMenuView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:self.mainMenuView];
-    
-    [self.mainMenuView initViews];
-    [self.mainMenuView.updatePlayerNameButton addTarget:self action:@selector(updatePlayerNameButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (IBAction)updatePlayerNameButtonPressed:(id)sender
-{
-    UpdatePlayerNameViewController *viewController = [[UpdatePlayerNameViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:viewController animated:YES];
-}
+//- (void)setupNavigationBar
+//{
+//    [self.navigationController setNavigationBarHidden:YES];
+//}
+//
+//- (void)initView
+//{
+//    self.mainMenuView = [[MainMenuView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:self.mainMenuView];
+//    
+//    [self.mainMenuView initViews];
+//    [self.mainMenuView.lastMatchButton addTarget:self action:@selector(updatePlayerNameButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+//}
+//
+//- (IBAction)updatePlayerNameButtonPressed:(id)sender
+//{
+//    UpdatePlayerNameViewController *viewController = [[UpdatePlayerNameViewController alloc] initWithNibName:nil bundle:nil];
+//    [self.navigationController pushViewController:viewController animated:YES];
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,5 +64,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

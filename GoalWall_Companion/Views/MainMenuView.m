@@ -14,25 +14,44 @@
 - (void)initViews
 {
     self.backgroundColor = [UIColor whiteColor];
-    self.updatePlayerNameButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.updatePlayerNameButton setTitle:@"Update player names" forState:UIControlStateNormal];
-    [self addSubview:self.updatePlayerNameButton];
+    self.backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    [self addSubview:self.backgroundImageView];
     
-    self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 500, 158)];
-    [self.logoImage setImage:[UIImage imageNamed:@"logo"]];
-    [self addSubview:self.logoImage];
+//    self.logoImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 500, 158)];
+//    [self.logoImage setImage:[UIImage imageNamed:@"logo"]];
+//    [self addSubview:self.logoImage];
+    
+    self.settingsButton = [OBShapedButton buttonWithType:UIButtonTypeCustom];
+    [self.settingsButton setBackgroundImage:[UIImage imageNamed:@"menu_menu_item_settings_normal"] forState:UIControlStateNormal];
+    [self addSubview:self.settingsButton];
+    
+    self.lastMatchButton = [OBShapedButton buttonWithType:UIButtonTypeCustom];
+    [self.lastMatchButton setBackgroundImage:[UIImage imageNamed:@"menu_menu_item_last_match_normal"] forState:UIControlStateNormal];
+    [self addSubview:self.lastMatchButton];
+    
+    self.rankingsButton = [OBShapedButton buttonWithType:UIButtonTypeCustom];
+    [self.rankingsButton setBackgroundImage:[UIImage imageNamed:@"menu_menu_item_rankings_normal"] forState:UIControlStateNormal];
+    [self addSubview:self.rankingsButton];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     
-    [self.updatePlayerNameButton setOriginX:20];
-    [self.updatePlayerNameButton setOriginY:100];
-    [self.updatePlayerNameButton sizeToFit];
+//    [self.logoImage setOriginX:(self.frame.size.width - self.logoImage.frame.size.width) / 2];
+//    [self.logoImage setOriginY:(self.frame.size.height - self.logoImage.frame.size.height) / 2];
     
-    [self.logoImage setOriginX:(self.frame.size.width - self.logoImage.frame.size.width) / 2];
-    [self.logoImage setOriginY:(self.frame.size.height - self.logoImage.frame.size.height) / 2];
+    [self.settingsButton setOriginX:229];
+    [self.settingsButton setOriginY:200];
+    [self.settingsButton sizeToFit];
+    
+    [self.lastMatchButton setOriginX:456];
+    [self.lastMatchButton setOriginY:113];
+    [self.lastMatchButton sizeToFit];
+    
+    [self.rankingsButton setOriginX:420];
+    [self.rankingsButton setOriginY:352];
+    [self.rankingsButton sizeToFit];
 }
 
 /*

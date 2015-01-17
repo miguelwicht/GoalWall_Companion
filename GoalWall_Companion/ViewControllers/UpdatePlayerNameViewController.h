@@ -7,11 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "URLConnectionManager.h"
 
-#import "UpdatePlayerNameView.h"
+@interface UpdatePlayerNameViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, URLConnectionManagerDelegate>
 
-@interface UpdatePlayerNameViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIImagePickerController *imagePickerController;
+@property (weak, nonatomic) IBOutlet UIButton *selectImageButton;
+@property (weak, nonatomic) IBOutlet UITextField *editNameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *gameModeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *labelOne;
+@property (weak, nonatomic) IBOutlet UILabel *labelOneTitle;
 
-@property(strong, nonatomic) UpdatePlayerNameView *updatePlayerNameView;
+@property (weak, nonatomic) IBOutlet UILabel *labelTwo;
+@property (weak, nonatomic) IBOutlet UILabel *labelTwoTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelThree;
+@property (weak, nonatomic) IBOutlet UILabel *labelThreeTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelFour;
+@property (weak, nonatomic) IBOutlet UILabel *labelFourTitle;
+
+@property (strong, nonatomic) URLConnectionManager *postManager;
+@property (strong, nonatomic) URLConnectionManager *getStatisticManager;
+
+@property (strong, nonatomic) NSDictionary *statistic;
+
+- (IBAction)selectImageButtonPressed:(UIButton *)sender;
+- (IBAction)backButtonPressed:(UIButton *)sender;
+- (IBAction)updatePlayerButtonPressed:(UIButton *)sender;
 
 @end

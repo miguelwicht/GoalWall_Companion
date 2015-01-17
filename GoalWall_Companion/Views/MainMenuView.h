@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OBShapedButton.h"
 
 @interface MainMenuView : UIView
 
-@property(strong, nonatomic) UIButton *updatePlayerNameButton;
 @property(strong, nonatomic) UIImageView *logoImage;
+@property(strong, nonatomic) UIImageView *backgroundImageView;
+@property(strong, nonatomic) IBOutlet OBShapedButton *settingsButton;
+@property(strong, nonatomic) IBOutlet OBShapedButton *rankingsButton;
+@property(strong, nonatomic) IBOutlet OBShapedButton *lastMatchButton;
 
 - (void)initViews;
 

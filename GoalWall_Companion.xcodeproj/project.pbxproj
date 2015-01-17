@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2210306E1A6A6D3C00F28EF7 /* URLConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2210306D1A6A6D3C00F28EF7 /* URLConnectionManager.m */; };
 		22549D351A221B5E00AAD76E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D341A221B5E00AAD76E /* main.m */; };
 		22549D381A221B5E00AAD76E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D371A221B5E00AAD76E /* AppDelegate.m */; };
 		22549D3B1A221B5E00AAD76E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D3A1A221B5E00AAD76E /* ViewController.m */; };
@@ -18,6 +19,8 @@
 		22549D5F1A22525500AAD76E /* UpdatePlayerNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D5E1A22525500AAD76E /* UpdatePlayerNameViewController.m */; };
 		22549D621A22529500AAD76E /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D611A22529500AAD76E /* MainMenuViewController.m */; };
 		22549D651A2254D800AAD76E /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22549D641A2254D800AAD76E /* MainMenuView.m */; };
+		229765C51A2A280D000C13A7 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 229765C21A2A280D000C13A7 /* OBShapedButton.m */; };
+		229765C61A2A280D000C13A7 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 229765C41A2A280D000C13A7 /* UIImage+ColorAtPixel.m */; };
 		22B0116A1A25210200039F1E /* UIView+MDWViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B011691A25210200039F1E /* UIView+MDWViewHelper.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2210306C1A6A6D3C00F28EF7 /* URLConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLConnectionManager.h; path = Helpers/URLConnectionManager.h; sourceTree = "<group>"; };
+		2210306D1A6A6D3C00F28EF7 /* URLConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLConnectionManager.m; path = Helpers/URLConnectionManager.m; sourceTree = "<group>"; };
+		2210306F1A6A858100F28EF7 /* URLConnectionManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLConnectionManagerDelegate.h; path = Helpers/URLConnectionManagerDelegate.h; sourceTree = "<group>"; };
 		22549D2F1A221B5E00AAD76E /* GoalWall_Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalWall_Companion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22549D331A221B5E00AAD76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22549D341A221B5E00AAD76E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +59,10 @@
 		22549D611A22529500AAD76E /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = ViewControllers/MainMenuViewController.m; sourceTree = "<group>"; };
 		22549D631A2254D800AAD76E /* MainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuView.h; path = Views/MainMenuView.h; sourceTree = "<group>"; };
 		22549D641A2254D800AAD76E /* MainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuView.m; path = Views/MainMenuView.m; sourceTree = "<group>"; };
+		229765C11A2A280D000C13A7 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OBShapedButton.h; path = Helpers/OBShapedButton.h; sourceTree = "<group>"; };
+		229765C21A2A280D000C13A7 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OBShapedButton.m; path = Helpers/OBShapedButton.m; sourceTree = "<group>"; };
+		229765C31A2A280D000C13A7 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ColorAtPixel.h"; path = "Helpers/UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		229765C41A2A280D000C13A7 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ColorAtPixel.m"; path = "Helpers/UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
 		22B011681A25210200039F1E /* UIView+MDWViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MDWViewHelper.h"; path = "Helpers/UIView+MDWViewHelper.h"; sourceTree = "<group>"; };
 		22B011691A25210200039F1E /* UIView+MDWViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MDWViewHelper.m"; path = "Helpers/UIView+MDWViewHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2210306B1A69152A00F28EF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		22549D261A221B5E00AAD76E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				22B011671A2520A800039F1E /* Helpers */,
+				2210306B1A69152A00F28EF7 /* Classes */,
 				22549D5C1A22521800AAD76E /* ViewControllers */,
 				22549D581A22518300AAD76E /* Views */,
 				22549D361A221B5E00AAD76E /* AppDelegate.h */,
@@ -164,6 +182,13 @@
 			children = (
 				22B011681A25210200039F1E /* UIView+MDWViewHelper.h */,
 				22B011691A25210200039F1E /* UIView+MDWViewHelper.m */,
+				229765C11A2A280D000C13A7 /* OBShapedButton.h */,
+				229765C21A2A280D000C13A7 /* OBShapedButton.m */,
+				229765C31A2A280D000C13A7 /* UIImage+ColorAtPixel.h */,
+				229765C41A2A280D000C13A7 /* UIImage+ColorAtPixel.m */,
+				2210306C1A6A6D3C00F28EF7 /* URLConnectionManager.h */,
+				2210306D1A6A6D3C00F28EF7 /* URLConnectionManager.m */,
+				2210306F1A6A858100F28EF7 /* URLConnectionManagerDelegate.h */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -274,8 +299,11 @@
 				22549D5B1A22520A00AAD76E /* UpdatePlayerNameView.m in Sources */,
 				22549D381A221B5E00AAD76E /* AppDelegate.m in Sources */,
 				22549D5F1A22525500AAD76E /* UpdatePlayerNameViewController.m in Sources */,
+				229765C61A2A280D000C13A7 /* UIImage+ColorAtPixel.m in Sources */,
 				22549D651A2254D800AAD76E /* MainMenuView.m in Sources */,
+				2210306E1A6A6D3C00F28EF7 /* URLConnectionManager.m in Sources */,
 				22549D621A22529500AAD76E /* MainMenuViewController.m in Sources */,
+				229765C51A2A280D000C13A7 /* OBShapedButton.m in Sources */,
 				22549D351A221B5E00AAD76E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

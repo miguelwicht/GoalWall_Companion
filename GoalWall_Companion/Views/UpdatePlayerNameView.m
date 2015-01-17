@@ -23,7 +23,7 @@
     
     
     self.modeTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.eventTitleLabel.frame.origin.y + self.eventTitleLabel.frame.size.height + 15, 100, 10)];
-    [self.modeTitleLabel setFont:[UIFont fontWithName:self.modeTitleLabel.font.fontName size:24]];
+    [self.modeTitleLabel setFont:[UIFont fontWithName:self.modeTitleLabel.font.fontName size:48]];
     [self.modeTitleLabel setText:@"Mode title"];
     [self addSubview:self.modeTitleLabel];
     [self.modeTitleLabel sizeToFit];
@@ -33,9 +33,9 @@
     [self.nameTextField setPlaceholder:@"Enter your name"];
     [self addSubview:self.nameTextField];
     
-    self.userImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [self.userImageView setBackgroundColor:[UIColor blackColor]];
-    [self addSubview:self.userImageView];
+    self.userImageButton = [OBShapedButton buttonWithType:UIButtonTypeCustom];
+    [self.userImageButton setImage:[UIImage imageNamed:@"user_image_normal"] forState:UIControlStateNormal];
+    [self addSubview:self.userImageButton];
     
     self.submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.submitButton setFrame:CGRectMake(0, 0, 100, 20)];
@@ -57,15 +57,18 @@
     [self.eventTitleLabel sizeToFit];
     
     
-    [self.modeTitleLabel setOriginX:20];
-    [self.modeTitleLabel setOriginY:self.eventTitleLabel.originBottom + 10];
+    
+    
+    [self.userImageButton setOriginX:74];
+    [self.userImageButton setOriginY:self.eventTitleLabel.originBottom + 10];
+    [self.userImageButton sizeToFit];
+    
+    [self.modeTitleLabel setOriginX:self.userImageButton.originRight + 44];
+    [self.modeTitleLabel setOriginY:self.userImageButton.originY];
     [self.modeTitleLabel sizeToFit];
     
-    [self.userImageView setOriginX:20];
-    [self.userImageView setOriginY:self.modeTitleLabel.originBottom + 10];
-    
     [self.nameTextField setOriginX:20];
-    [self.nameTextField setOriginY:self.userImageView.originBottom + 10];
+    [self.nameTextField setOriginY:self.userImageButton.originBottom + 10];
     
     [self.submitButton setOriginX:self.nameTextField.originRight + 10];
     [self.submitButton setOriginY:self.nameTextField.originY];
