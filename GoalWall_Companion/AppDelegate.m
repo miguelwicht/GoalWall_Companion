@@ -23,7 +23,16 @@
 //    [self.navigationController.view setBackgroundColor:[UIColor whiteColor]];
 //    self.window.rootViewController = self.navigationController;
     
+    [self registerUserDefaults];
+    
     return YES;
+}
+
+- (void)registerUserDefaults
+{
+    NSURL *defaultPrefsFile = [[NSBundle mainBundle] URLForResource:@"DefaultSettings" withExtension:@"plist"];
+    NSDictionary *defaultPrefs = [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

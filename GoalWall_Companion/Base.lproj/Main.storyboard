@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="7tR-H5-DvV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,14 +9,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="CZf-GK-isf"/>
+                        <viewControllerLayoutGuide type="bottom" id="a8r-4n-Jv1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fO-GM-NhK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fO-GM-NhK">
                                 <rect key="frame" x="0.0" y="0.0" width="222" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,17 +49,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-JK-aEa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-JK-aEa">
                                 <rect key="frame" x="172" y="464" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="h7L-U4-Nj5"/>
-                                    <constraint firstAttribute="height" constant="128" id="inh-73-zZQ"/>
-                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" image="EditWabe" translatesAutoresizingMaskIntoConstraints="NO" id="TL0-PV-pZ5">
                                 <rect key="frame" x="11" y="146" width="200" height="200"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO1-st-F0s">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO1-st-F0s">
                                 <rect key="frame" x="0.0" y="83" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -79,12 +74,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="BO1-st-F0s" firstAttribute="top" secondItem="9fO-GM-NhK" secondAttribute="bottom" constant="15" id="OGv-QP-H2s"/>
-                            <constraint firstItem="9fO-GM-NhK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="P5w-si-1UY"/>
-                            <constraint firstAttribute="centerX" secondItem="Ept-JK-aEa" secondAttribute="centerX" id="VLH-io-iww"/>
-                            <constraint firstItem="BO1-st-F0s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="a3D-DI-JUA"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="eventTitleLabel" destination="9fO-GM-NhK" id="d25-QR-NZZ"/>
@@ -119,8 +108,8 @@
             <objects>
                 <viewController id="Mc9-nr-KQN" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OoC-ib-6bT"/>
-                        <viewControllerLayoutGuide type="bottom" id="F0x-eA-pSh"/>
+                        <viewControllerLayoutGuide type="top" id="0tX-u5-ckl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ola-4h-pBa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e1J-AW-FX7">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -136,6 +125,9 @@
                                 </state>
                                 <state key="selected" image="settings_selected"/>
                                 <state key="highlighted" image="settings_selected"/>
+                                <connections>
+                                    <action selector="settingsButtonPressed:" destination="Mc9-nr-KQN" eventType="touchUpInside" id="Z52-au-A70"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-v5-LNW" customClass="OBShapedButton">
                                 <rect key="frame" x="232" y="204" width="272" height="255"/>
@@ -144,14 +136,17 @@
                                 </state>
                                 <state key="selected" image="ranking_selected"/>
                                 <state key="highlighted" image="ranking_selected"/>
+                                <connections>
+                                    <segue destination="jFb-Eu-48W" kind="push" id="u3y-E6-4OD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-Ku-KK4" customClass="OBShapedButton">
                                 <rect key="frame" x="455" y="114" width="272" height="255"/>
-                                <state key="normal" image="match_normal">
+                                <state key="normal" image="lastmatch_normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" image="match_selected"/>
-                                <state key="highlighted" image="match_selected"/>
+                                <state key="selected" image="lastmatch_selected"/>
+                                <state key="highlighted" image="lastmatch_selected"/>
                                 <connections>
                                     <segue destination="EAc-Kd-Ia8" kind="push" id="M2E-0K-lCn"/>
                                 </connections>
@@ -165,20 +160,214 @@
             </objects>
             <point key="canvasLocation" x="1770" y="725"/>
         </scene>
+        <!--Rankings View Controller-->
+        <scene sceneID="yTH-ZC-hqb">
+            <objects>
+                <viewController id="jFb-Eu-48W" customClass="RankingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7c-ey-QOS"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Hj-X3-7ub"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PNk-Ow-u35">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="135" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jfK-yk-xMv">
+                                <rect key="frame" x="0.0" y="161" width="1024" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="RankingCell" rowHeight="135" id="SQh-b4-p6Q" customClass="RankingTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="1029" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQh-b4-p6Q" id="P57-k0-o54">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-1m-SSD">
+                                                    <rect key="frame" x="8" y="40" width="58" height="56"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miguel dos Santos Vaz Dias Wicht" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhN-EY-b2r">
+                                                    <rect key="frame" x="194" y="17" width="267" height="100"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yr5-xX-1v0">
+                                                    <rect key="frame" x="853" y="80" width="120" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyq-KK-qwu">
+                                                    <rect key="frame" x="725" y="80" width="120" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAn-ii-rkH">
+                                                    <rect key="frame" x="597" y="80" width="120" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbv-lU-twy">
+                                                    <rect key="frame" x="469" y="80" width="120" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh5-Lz-jjs">
+                                                    <rect key="frame" x="853" y="26" width="120" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="40"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gZ-bk-qZg">
+                                                    <rect key="frame" x="725" y="26" width="120" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="40"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unU-TL-qEK">
+                                                    <rect key="frame" x="597" y="26" width="120" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="40"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="130" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-b4-2sH">
+                                                    <rect key="frame" x="469" y="26" width="120" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="40"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgQ-lS-X4N">
+                                                    <rect key="frame" x="74" y="17" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="vhN-EY-b2r" id="hdg-nr-FAg"/>
+                                            <outlet property="profileImageView" destination="FgQ-lS-X4N" id="Qgv-ZT-KG8"/>
+                                            <outlet property="rankLabel" destination="TgU-1m-SSD" id="nJA-1A-Zlz"/>
+                                            <outlet property="valueDescriptionLabel01" destination="pbv-lU-twy" id="YUD-0r-LE1"/>
+                                            <outlet property="valueDescriptionLabel02" destination="TAn-ii-rkH" id="044-Zj-Qo5"/>
+                                            <outlet property="valueDescriptionLabel03" destination="cyq-KK-qwu" id="kNV-wL-naY"/>
+                                            <outlet property="valueDescriptionLabel04" destination="Yr5-xX-1v0" id="8DO-NP-SgJ"/>
+                                            <outlet property="valueLabel01" destination="Kls-b4-2sH" id="acF-fu-pzs"/>
+                                            <outlet property="valueLabel02" destination="unU-TL-qEK" id="l7U-s4-sMI"/>
+                                            <outlet property="valueLabel03" destination="2gZ-bk-qZg" id="ZJi-P2-PEH"/>
+                                            <outlet property="valueLabel04" destination="wh5-Lz-jjs" id="H0Z-9X-Zao"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="menu_bar" translatesAutoresizingMaskIntoConstraints="NO" id="nqz-Mv-oOF">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="171"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RANKING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5p-xa-ypq">
+                                <rect key="frame" x="208" y="19" width="800" height="134"/>
+                                <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-GF-2iG">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="162"/>
+                                <state key="normal" image="ranking_back_button_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="ranking_back_button_selected"/>
+                                <state key="highlighted" image="ranking_back_button_selected"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="EAc-Kd-Ia8" eventType="touchUpInside" id="0Pj-74-beg"/>
+                                    <action selector="backButtonPressed:" destination="jFb-Eu-48W" eventType="touchUpInside" id="m1x-H9-4tH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLASSIC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-OX-kL3">
+                                <rect key="frame" x="208" y="115" width="800" height="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgB-Mo-UUE">
+                                <rect key="frame" x="843" y="30" width="78" height="68"/>
+                                <state key="normal" image="classic_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="classicButtonPressed:" destination="jFb-Eu-48W" eventType="touchUpInside" id="rIm-aK-tG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4r-b0-sGV">
+                                <rect key="frame" x="905" y="64" width="78" height="68"/>
+                                <state key="normal" image="sniper_normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sniperButtonPressed:" destination="jFb-Eu-48W" eventType="touchUpInside" id="Qg9-HA-ToY"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-uP-bL1">
+                                <rect key="frame" x="0.0" y="161" width="1024" height="607"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="G4B-ht-pgp">
+                                        <rect key="frame" x="494" y="285" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ygg-r8-Zpl"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="G4B-ht-pgp" id="LoG-in-DHF"/>
+                        <outlet property="gameModeLabel" destination="Qfh-OX-kL3" id="zQ0-A9-FSh"/>
+                        <outlet property="overlayView" destination="wl4-uP-bL1" id="JdS-g4-zYv"/>
+                        <outlet property="tableView" destination="jfK-yk-xMv" id="tEo-SG-HEF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWw-8L-ljd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="1563"/>
+        </scene>
         <!--Update Player Name View Controller-->
         <scene sceneID="LpT-ho-Khr">
             <objects>
                 <viewController id="EAc-Kd-Ia8" customClass="UpdatePlayerNameViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="l4I-K0-Sne"/>
-                        <viewControllerLayoutGuide type="bottom" id="vv1-ee-YvX"/>
+                        <viewControllerLayoutGuide type="top" id="UBv-Gt-wXp"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLf-LK-kv6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1AD-34-hNz">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YH3-xO-HXp">
-                                <rect key="frame" x="0.0" y="-20" width="1024" height="788"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Xxa-T8-7Q5">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -193,62 +382,91 @@
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="171"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-aZ-aqq">
-                                        <rect key="frame" x="275" y="285" width="160" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                        <rect key="frame" x="275" y="280" width="160" height="70"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuk-kF-YA4">
                                         <rect key="frame" x="275" y="363" width="160" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4I-nb-bb3">
                                         <rect key="frame" x="443" y="280" width="160" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shots" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-HU-O3h">
                                         <rect key="frame" x="443" y="363" width="160" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xo-nn-DOe">
+                                        <rect key="frame" x="911" y="200" width="43" height="43"/>
+                                        <state key="normal" image="reload_normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="reload_selected"/>
+                                        <state key="highlighted" image="reload_selected"/>
+                                        <connections>
+                                            <action selector="reloadButtonPressed:" destination="EAc-Kd-Ia8" eventType="touchUpInside" id="BlX-uF-Jo3"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ya-cc-j0Q">
                                         <rect key="frame" x="611" y="280" width="160" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c68-hJ-ejU">
                                         <rect key="frame" x="611" y="363" width="160" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCM-KI-rlk">
                                         <rect key="frame" x="779" y="280" width="160" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="55"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLK-ys-TOh">
                                         <rect key="frame" x="779" y="363" width="160" height="34"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SPIELMODUS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvE-Ge-MEZ">
                                         <rect key="frame" x="275" y="195" width="379" height="57"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="34"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="34"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Match" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFW-mf-akt">
                                         <rect key="frame" x="208" y="19" width="800" height="134"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="60"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="60"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No new data available. Go and play first!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r4-FW-Wkg">
+                                        <rect key="frame" x="180" y="213" width="664" height="200"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="34"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -264,7 +482,8 @@
                                         <state key="normal" image="last_match_back_button_normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" image="last_match_back_button_normal"/>
+                                        <state key="selected" image="last_match_back_button_selected"/>
+                                        <state key="highlighted" image="last_match_back_button_selected"/>
                                         <connections>
                                             <action selector="backButtonPressed:" destination="EAc-Kd-Ia8" eventType="touchUpInside" id="eeZ-qX-cY9"/>
                                         </connections>
@@ -272,8 +491,13 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-UI-XtI">
                                         <rect key="frame" x="38" y="405" width="201" height="67"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="24"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuU-Y7-1OY" customClass="OBShapedButton">
                                         <rect key="frame" x="774" y="622" width="199" height="140"/>
@@ -286,6 +510,21 @@
                                             <action selector="updatePlayerButtonPressed:" destination="EAc-Kd-Ia8" eventType="touchUpInside" id="dEe-zA-Ro0"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="text_lastmatch" translatesAutoresizingMaskIntoConstraints="NO" id="f39-dL-mZD">
+                                        <rect key="frame" x="190" y="495" width="521" height="181"/>
+                                    </imageView>
+                                    <view alpha="0.74999999999999978" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxc-O3-Vau">
+                                        <rect key="frame" x="0.0" y="161" width="1024" height="627"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-wd-Mti">
+                                                <rect key="frame" x="494" y="275" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                    </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -293,7 +532,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZYh-h2-sOJ"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="YwE-wd-Mti" id="xHm-EH-Ux8"/>
                         <outlet property="editNameTextField" destination="rG4-UI-XtI" id="Rm5-ME-rrn"/>
+                        <outlet property="errorLabel" destination="7r4-FW-Wkg" id="162-V8-BnB"/>
                         <outlet property="gameModeLabel" destination="GvE-Ge-MEZ" id="zGO-8y-YSB"/>
                         <outlet property="labelFour" destination="TCM-KI-rlk" id="IXO-HS-Hcq"/>
                         <outlet property="labelFourTitle" destination="uLK-ys-TOh" id="oxh-K0-Nvb"/>
@@ -303,32 +544,126 @@
                         <outlet property="labelThreeTitle" destination="c68-hJ-ejU" id="ZuH-0B-kDd"/>
                         <outlet property="labelTwo" destination="O4I-nb-bb3" id="zI8-tn-YKi"/>
                         <outlet property="labelTwoTitle" destination="HWd-HU-O3h" id="Rf3-sz-txf"/>
+                        <outlet property="overlayView" destination="dxc-O3-Vau" id="B5B-kt-mSB"/>
                         <outlet property="scrollView" destination="YH3-xO-HXp" id="BlF-nI-ebO"/>
                         <outlet property="selectImageButton" destination="uFl-Tf-vlO" id="wvY-Xv-KtB"/>
+                        <outlet property="uploadDataButton" destination="GuU-Y7-1OY" id="byI-Z8-8eH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmp-MK-ZeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2915" y="562"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="H7P-Yo-Gpi">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="Cdm-7E-UjK" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfs-AW-2s6"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQI-Vb-5GB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vac-CM-W3q">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPr-Is-vqm">
+                                <rect key="frame" x="-64" y="-20" width="1108" height="808"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_background" translatesAutoresizingMaskIntoConstraints="NO" id="9PK-90-34c">
+                                        <rect key="frame" x="64" y="20" width="1024" height="768"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvk-Dc-ed2">
+                                        <rect key="frame" x="354" y="395" width="445" height="30"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DAp-f0-dpr">
+                                        <rect key="frame" x="354" y="433" width="445" height="30"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAz-0M-oMO">
+                                        <rect key="frame" x="354" y="319" width="445" height="30"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I20-2f-ftV">
+                                        <rect key="frame" x="354" y="357" width="445" height="30"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Oblique" family="Avenir" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbS-Q6-6X6" customClass="OBShapedButton">
+                                        <rect key="frame" x="844" y="645" width="184" height="140"/>
+                                        <state key="normal" image="save_normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="save_selected"/>
+                                        <state key="highlighted" image="save_selected"/>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="Cdm-7E-UjK" eventType="touchUpInside" id="vee-dt-coh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-Kr-tp9" customClass="OBShapedButton">
+                                        <rect key="frame" x="64" y="31" width="135" height="145"/>
+                                        <state key="normal" image="back_normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="back_selected"/>
+                                        <state key="highlighted" image="back_selected"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Cdm-7E-UjK" eventType="touchUpInside" id="43r-Zh-SOZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C0P-T3-AMp"/>
+                    <connections>
+                        <outlet property="eventIDTextField" destination="DAp-f0-dpr" id="cUD-aR-lPp"/>
+                        <outlet property="hostTextField" destination="jAz-0M-oMO" id="QIj-Kb-Reb"/>
+                        <outlet property="passwordTextField" destination="nvk-Dc-ed2" id="3wW-Dr-wVZ"/>
+                        <outlet property="saveButton" destination="NbS-Q6-6X6" id="Z3O-XV-YL9"/>
+                        <outlet property="scrollView" destination="wPr-Is-vqm" id="msY-3I-Kv1"/>
+                        <outlet property="usernameTextField" destination="I20-2f-ftV" id="Cbn-4L-tm2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afD-vE-w49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2915" y="1495"/>
+        </scene>
     </scenes>
     <resources>
         <image name="EditWabe" width="272" height="255"/>
+        <image name="back_normal" width="135" height="145"/>
+        <image name="back_selected" width="135" height="145"/>
         <image name="background" width="1024" height="768"/>
         <image name="camera" width="201" height="202"/>
+        <image name="classic_normal" width="78" height="68"/>
         <image name="go_normal" width="144" height="140"/>
         <image name="go_selected" width="144" height="140"/>
-        <image name="last_match_back_button_normal" width="159" height="162"/>
+        <image name="last_match_back_button_normal" width="171" height="162"/>
+        <image name="last_match_back_button_selected" width="171" height="162"/>
         <image name="last_match_score_background" width="1024" height="327"/>
+        <image name="lastmatch_normal" width="272" height="255"/>
+        <image name="lastmatch_selected" width="272" height="255"/>
         <image name="logo" width="1475" height="465"/>
-        <image name="match_normal" width="272" height="255"/>
-        <image name="match_selected" width="272" height="255"/>
         <image name="menu_bar" width="1024" height="171"/>
         <image name="menubar" width="1038" height="175"/>
+        <image name="ranking_back_button_normal" width="171" height="162"/>
+        <image name="ranking_back_button_selected" width="171" height="162"/>
         <image name="ranking_normal" width="272" height="255"/>
         <image name="ranking_selected" width="272" height="255"/>
+        <image name="reload_normal" width="43" height="43"/>
+        <image name="reload_selected" width="43" height="43"/>
+        <image name="save_normal" width="144" height="140"/>
+        <image name="save_selected" width="144" height="140"/>
+        <image name="settings_background" width="1024" height="768"/>
         <image name="settings_normal" width="273" height="255"/>
         <image name="settings_selected" width="273" height="255"/>
+        <image name="sniper_normal" width="78" height="68"/>
+        <image name="text_lastmatch" width="521" height="181"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

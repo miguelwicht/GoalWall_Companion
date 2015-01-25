@@ -171,10 +171,10 @@
 //    NSLog(@"%@", self.statisticData);
 //    [self initLabels];
     
-    NSError *error;
-    NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:self.responseData
-                                                                 options:kNilOptions
-                                                                   error:&error];
+//    NSError *error;
+//    NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:self.responseData
+//                                                                 options:kNilOptions
+//                                                                   error:&error];
     
     [self.delegate manager:self didFinishLoading:self.responseData];
 }

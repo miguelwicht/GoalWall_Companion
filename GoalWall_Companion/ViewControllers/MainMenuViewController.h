@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainMenuView.h"
 
-@interface MainMenuViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface MainMenuViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIAlertViewDelegate>
 
 //@property(strong, nonatomic) MainMenuView *mainMenuView;
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
@@ -29,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelFourTitle;
 
 - (IBAction)selectImageButtonPressed:(UIButton *)sender;
+- (IBAction)settingsButtonPressed:(id)sender;
 
 - (IBAction)backButtonPressed:(UIButton *)sender;
 

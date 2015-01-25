@@ -9,6 +9,7 @@
 #import "MainMenuViewController.h"
 #import "UpdatePlayerNameViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "SettingsViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -50,6 +51,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -65,5 +70,63 @@
 }
 */
 
+
+- (IBAction)settingsButtonPressed:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc]
+             initWithTitle:NSLocalizedString(@"Please enter the password:", @"")
+             message:nil
+             delegate:self
+             cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+             otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+//    UITextField *textField = [alert textFieldAtIndex:0];
+//    textField.placeholder = NSLocalizedString(@"Title", @"placeholder text where user enters name for new playlist");
+//    textField.delegate = self;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    NSLog(@"buttonIndex: %i", buttonIndex);
+    
+    UITextField * alertTextField = [alertView textFieldAtIndex:0];
+    NSString *text = alertTextField.text;
+    
+    switch (buttonIndex)
+    {
+        case 1:
+        {
+            if ([text isEqualToString:@"!h_da_hobit_2015!"])
+            {
+                SettingsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"settings"];
+                
+                [self.navigationController pushViewController:viewController animated:YES];
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc]
+                                      initWithTitle:NSLocalizedString(@"Wrong password", @"")
+                                      message:nil
+                                      delegate:nil
+                                      cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                      otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+                [alert show];
+            }
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    
+    
+    
+
+    
+    // do whatever you want to do with this UITextField.
+}
 
 @end
