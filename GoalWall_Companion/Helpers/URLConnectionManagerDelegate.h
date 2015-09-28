@@ -12,5 +12,6 @@
 @protocol URLConnectionManagerDelegate <NSObject>
 
 - (void)manager:(URLConnectionManager *)manager didFinishLoading:(NSData *)data;
+- (void)manager:(URLConnectionManager *)manager didFailWithError:(NSError *)error;
 
 @end

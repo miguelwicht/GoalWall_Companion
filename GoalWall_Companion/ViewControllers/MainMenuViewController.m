@@ -7,8 +7,6 @@
 //
 
 #import "MainMenuViewController.h"
-#import "UpdatePlayerNameViewController.h"
-#import <MobileCoreServices/MobileCoreServices.h>
 #import "SettingsViewController.h"
 
 @interface MainMenuViewController ()
@@ -17,59 +15,12 @@
 
 @implementation MainMenuViewController
 
-//- (void)loadView
-//{
-//    [super loadView];
-////    [self setupNavigationBar];
-////    [self initView];
-//    NSLog(@"loadView");
-//    
-//}
-
-//- (void)setupNavigationBar
-//{
-//    [self.navigationController setNavigationBarHidden:YES];
-//}
-//
-//- (void)initView
-//{
-//    self.mainMenuView = [[MainMenuView alloc] initWithFrame:self.view.frame];
-//    [self.view addSubview:self.mainMenuView];
-//    
-//    [self.mainMenuView initViews];
-//    [self.mainMenuView.lastMatchButton addTarget:self action:@selector(updatePlayerNameButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-//}
-//
-//- (IBAction)updatePlayerNameButtonPressed:(id)sender
-//{
-//    UpdatePlayerNameViewController *viewController = [[UpdatePlayerNameViewController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:viewController animated:YES];
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (BOOL)prefersStatusBarHidden{
-    return YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+#pragma mark - IBActions
 
 - (IBAction)settingsButtonPressed:(id)sender
 {
@@ -81,15 +32,14 @@
              otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     
-//    UITextField *textField = [alert textFieldAtIndex:0];
-//    textField.placeholder = NSLocalizedString(@"Title", @"placeholder text where user enters name for new playlist");
-//    textField.delegate = self;
     [alert show];
 }
 
+#pragma mark - UIAlertViewDelegate Methods
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    NSLog(@"buttonIndex: %i", buttonIndex);
+    NSLog(@"buttonIndex: %li", (long)buttonIndex);
     
     UITextField * alertTextField = [alertView textFieldAtIndex:0];
     NSString *text = alertTextField.text;
@@ -120,13 +70,17 @@
         default:
             break;
     }
-    
-    
-    
-    
+}
 
-    
-    // do whatever you want to do with this UITextField.
+#pragma mark -
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -24,8 +24,11 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.settings = [[NSDictionary alloc] initWithDictionary:[defaults objectForKey:@"settings"]];
     
+    //self.defaultImage = [UIImage imageNamed:@"user_image_normal"];
+    UIImage *image = self.selectImageButton.imageView.image;
+    self.defaultImage = [[UIImage alloc] initWithCGImage:image.CGImage scale:image.scale orientation:image.imageOrientation];
+    
     [self getStatistic];
-//    [self hideLoadingScreen];
 }
 
 - (void)viewDidLoad {
@@ -53,10 +56,9 @@
     }
 }
 
-- (IBAction)backButtonPressed:(UIButton *)sender {
-    NSLog(@"POP");
+- (IBAction)backButtonPressed:(UIButton *)sender
+{
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
 
 #pragma mark - Networking
@@ -65,7 +67,7 @@
 {
     self.getStatisticManager = [[URLConnectionManager alloc] init];
     self.getStatisticManager.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/statistics/latest/%@?user=%@&password=%@", self.settings[@"host"], self.settings[@"eventID"], self.settings[@"username"], self.settings[@"password"]]];
-//    [NSURL URLWithString:@"http://goalwall.de/statistics/latest/1?user=mail@miguelwicht.com&password=password"];
+    
     self.getStatisticManager.delegate = self;
     [self.getStatisticManager get];
 }
@@ -91,8 +93,12 @@
     
     NSMutableData *body = [[NSMutableData alloc] init];
     [self.postManager appendDictionary:postDict toBody:body];
-//    [self.postManager appendImage:[self.selectImageButton.imageView.image withName:@"image" filename:@"imageFilename" toBody:body];
-    [self.postManager appendImage:self.selectImageButton.imageView.image withName:@"image" filename:@"imageFilename.jpg" toBody:body];
+    
+    if (self.selectImageButton.imageView.image != self.defaultImage)
+    {
+        [self.postManager appendImage:self.selectImageButton.imageView.image withName:@"image" filename:@"imageFilename.jpg" toBody:body];
+    }
+    
     [self.postManager postFormWithBody:body];
 }
 
@@ -112,7 +118,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"didPickImage");
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     UIImageWriteToSavedPhotosAlbum(image,self,@selector(image:finishedSavingWithError:contextInfo:),nil);
     [self.selectImageButton setImage:image forState:UIControlStateNormal];
@@ -141,18 +146,26 @@
         NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:data
                                                                      options:kNilOptions
                                                                        error:&error];
-        NSLog(@"response: %@", responseDict);
+
         self.statistic = [[NSDictionary alloc] initWithDictionary:responseDict];
         [self initLabelsWithStatistic:responseDict];
     }
     else if (manager == self.postManager)
     {
-        NSLog(@"postManager didFinish");
         [self getStatistic];
     }
     
     [self hideLoadingScreen];
-    //NSLog(@"response: %@", responseDict);
+}
+
+- (void)manager:(URLConnectionManager *)manager didFailWithError:(NSError *)error {
+    self.errorAlertView = [[UIAlertView alloc]
+                            initWithTitle:NSLocalizedString(@"Could not find any new data.", @"")
+                            message:nil
+                            delegate:self
+                            cancelButtonTitle:nil
+                            otherButtonTitles:NSLocalizedString(@"Menu", @""), nil];
+    [self.errorAlertView show];
 }
 
 - (void)disableSaveButton
@@ -215,7 +228,8 @@
         self.labelThree.text = [NSString stringWithFormat:@"%i", [statistic[@"shots"] integerValue] - [statistic[@"misses"] integerValue]];
         self.labelFour.text = [NSString stringWithFormat:@"%.0F %%", ([statistic[@"shots"] floatValue] - [statistic[@"misses"] floatValue]) / [statistic[@"shots"] floatValue] * 100];
         
-        self.selectImageButton.imageView.image = [UIImage imageNamed:@"camera"];
+        [self.selectImageButton setImage:self.defaultImage forState:UIControlStateNormal];
+        self.editNameTextField.text = @"";
         
         [self hideError];
     }
@@ -223,11 +237,40 @@
     {
         [self showError];
     }
+}
+
+#pragma mark - UIAlertViewDelegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView == self.noNameAlertView) {
     
-    
-    NSLog(@"%@", self.labelFour.text);
-    
-    //round(($statistic->shots - $statistic->misses) / $statistic->shots, 2) * 100 . ' %'
+        switch (buttonIndex)
+        {
+            case 1:
+            {
+                [self showLoadingScreen];
+                [self updateStatistic];
+                break;
+            }
+            
+            default:
+                break;
+        }
+    } else if (alertView == self.errorAlertView){
+        switch (buttonIndex)
+        {
+            case 1:
+            {
+                [self.navigationController popViewControllerAnimated:YES];
+                break;
+            }
+                
+            default:
+                [self.navigationController popViewControllerAnimated:YES];
+                break;
+        }
+    }
 }
 
 #pragma mark - keyboard notifications
@@ -319,8 +362,21 @@
 
 - (IBAction)updatePlayerButtonPressed:(UIButton *)sender
 {
-    [self showLoadingScreen];
-    [self updateStatistic];
+    if ([self.editNameTextField.text isEqualToString:@""])
+    {
+        self.noNameAlertView = [[UIAlertView alloc]
+                                    initWithTitle:NSLocalizedString(@"You haven't entered a name! Do you really want to continue?", @"")
+                                    message:nil
+                                    delegate:self
+                                    cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                    otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+        [self.noNameAlertView show];
+    }
+    else
+    {
+        [self showLoadingScreen];
+        [self updateStatistic];
+    }
 }
 
 - (IBAction)reloadButtonPressed:(id)sender

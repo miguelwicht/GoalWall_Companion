@@ -19,6 +19,8 @@
     [super loadView];
     //[self saveImage:[UIImage imageNamed:@"camera"] withName:@"uploads/players/player.jpg"];
     
+    self.tableView.tableFooterView = [UIView new];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.settings = [[NSDictionary alloc] initWithDictionary:[defaults objectForKey:@"settings"]];
     
@@ -53,7 +55,7 @@
     {
         NSError *error;
         NSArray *response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        NSLog(@"response: %@", response);
+//        NSLog(@"response: %@", response);
         [self createDataSourceFromRankings:response];
         
         [self hideLoadingScreen];
@@ -78,7 +80,7 @@
         
         NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         NSString *imagesDirectory = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"uploads/players/%@", [dict[@"player_image_path"] lastPathComponent]]];
-        NSLog(@"imagesDirectory: %@", imagesDirectory);
+//        NSLog(@"imagesDirectory: %@", imagesDirectory);
         UIImage *image;
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:imagesDirectory])
@@ -104,7 +106,7 @@
     
     self.dataSource = [[NSMutableArray alloc] initWithArray:dataSource];
     
-    NSLog(@"DataSource: %@", self.dataSource);
+//    NSLog(@"DataSource: %@", self.dataSource);
     
     [self downloadImages];
     [self.tableView reloadData];
@@ -175,7 +177,7 @@
                              
                              if ([responseUrl rangeOfString:self.dataSource[j][@"image_path"]].location != NSNotFound)
                              {
-                                 NSLog(@"dataSource: %@, response: %@", self.dataSource[j][@"image_path"], responseUrl);
+//                                 NSLog(@"dataSource: %@, response: %@", self.dataSource[j][@"image_path"], responseUrl);
                                  indexPath = [NSIndexPath indexPathForRow:j inSection:0];
                                  [self.dataSource[j] setObject:image forKey:@"image"];
 
@@ -304,13 +306,6 @@
 {
     return [self.dataSource count];
 }
-
-//- (void)viewDidLayoutSubviews
-//{
-//    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-//        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
-//    }
-//}
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

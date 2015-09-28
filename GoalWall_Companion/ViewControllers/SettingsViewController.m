@@ -42,6 +42,9 @@
     self.passwordTextField.text = [settings objectForKey:@"password"];
     self.eventIDTextField.text = [settings objectForKey:@"eventID"];
     
+    self.hostTextField.delegate = self;
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
     self.eventIDTextField.delegate = self;
 }
 
@@ -97,7 +100,7 @@
     
     if (!CGRectContainsPoint(visibleRect, self.selectedTextField.frame.origin)){
         
-        CGPoint scrollPoint = CGPointMake(0.0, self.selectedTextField.frame.origin.y - visibleRect.size.height + self.selectedTextField.frame.size.height);
+        CGPoint scrollPoint = CGPointMake(0.0, self.selectedTextField.frame.origin.y - visibleRect.size.height + self.selectedTextField.frame.size.height + 20);
         
         [self.scrollView setContentOffset:scrollPoint animated:YES];
     }

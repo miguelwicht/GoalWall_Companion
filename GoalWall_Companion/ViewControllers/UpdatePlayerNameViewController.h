@@ -10,7 +10,7 @@
 #import "URLConnectionManager.h"
 #import "OBShapedButton.h"
 
-@interface UpdatePlayerNameViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, URLConnectionManagerDelegate>
+@interface UpdatePlayerNameViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate, URLConnectionManagerDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
@@ -36,11 +36,16 @@
 
 @property (weak, nonatomic) IBOutlet OBShapedButton *uploadDataButton;
 
+@property (strong, nonatomic) UIImage *defaultImage;
+
 
 @property (strong, nonatomic) URLConnectionManager *postManager;
 @property (strong, nonatomic) URLConnectionManager *getStatisticManager;
 @property (strong, nonatomic) NSDictionary *statistic;
 @property (strong, nonatomic) NSDictionary *settings;
+
+@property (strong, nonatomic) UIAlertView *noNameAlertView;
+@property (strong, nonatomic) UIAlertView *errorAlertView;
 
 - (IBAction)selectImageButtonPressed:(UIButton *)sender;
 - (IBAction)backButtonPressed:(UIButton *)sender;

@@ -182,7 +182,8 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!
     // Check the error var
-    NSLog(@"DidFailWithError: %@", error);
+//    NSLog(@"DidFailWithError: %@", error);
+    [self.delegate manager:self didFailWithError:error];
 }
 
 
